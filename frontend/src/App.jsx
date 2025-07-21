@@ -1,9 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import LandingPage from "./pages/LandingPage.jsx";
+import UserProvider from "./context/UserContext.jsx";
 const App = () => {
   return (
-    <div> <h1 className="text-3xl font-bold underline">    Hello world!  </h1></div>
-  )
-}
+    <UserProvider>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </UserProvider>
+  );
+};
 
-export default App
+export default App;
