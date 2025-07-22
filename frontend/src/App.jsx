@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage.jsx";
-import UserProvider from "./context/UserContext.jsx";
+import UserProvider  from "./context/UserProvider.jsx";
 const App = () => {
   return (
     <UserProvider>
