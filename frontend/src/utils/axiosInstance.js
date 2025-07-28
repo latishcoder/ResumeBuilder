@@ -24,11 +24,11 @@ axiosInstance.interceptors.request.use((config) => {
 );
 
 //RESPONSE INTERCEPTOR
-axiosInstance.interceptors.response.use((response) => {
-    (response) => {
-        return response;
-    }
-},
+axiosInstance.interceptors.response.use(
+  (response) => {
+    return response;
+  },
+
 (error) => {
     if(error.response) {
         if(error.response.status === 401) {
